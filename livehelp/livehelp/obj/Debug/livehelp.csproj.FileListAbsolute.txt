@@ -1,0 +1,72 @@
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\livehelp.dll.config
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\livehelp.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\livehelp.pdb
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\Antlr3.Runtime.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\EntityFramework.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\Microsoft.Web.Infrastructure.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\Newtonsoft.Json.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Net.Http.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Net.Http.Formatting.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Net.Http.WebRequest.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.Http.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.Http.WebHost.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.Mvc.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.Optimization.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.Providers.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.Razor.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.WebPages.Deployment.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.WebPages.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.WebPages.Razor.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\WebGrease.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\EntityFramework.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\Newtonsoft.Json.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Net.Http.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Net.Http.Formatting.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Net.Http.WebRequest.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.Http.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.Http.WebHost.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.Mvc.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.Razor.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.WebPages.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.WebPages.Deployment.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\bin\System.Web.WebPages.Razor.xml
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\obj\Debug\livehelp.csprojResolveAssemblyReference.cache
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\obj\Debug\livehelp.dll
+c:\users\user\documents\visual studio 2013\Projects\livehelp\livehelp\obj\Debug\livehelp.pdb
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\livehelp.dll.config
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\livehelp.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\livehelp.pdb
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\Antlr3.Runtime.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\EntityFramework.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\Microsoft.Web.Infrastructure.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\Newtonsoft.Json.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Net.Http.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Net.Http.Formatting.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Net.Http.WebRequest.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.Http.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.Http.WebHost.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.Mvc.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.Optimization.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.Providers.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.Razor.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.WebPages.Deployment.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.WebPages.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.WebPages.Razor.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\WebGrease.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\EntityFramework.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\Newtonsoft.Json.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Net.Http.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Net.Http.Formatting.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Net.Http.WebRequest.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.Http.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.Http.WebHost.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.Mvc.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.Razor.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.WebPages.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.WebPages.Deployment.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\bin\System.Web.WebPages.Razor.xml
+C:\..PROJECTS\LiveChat\livehelp\livehelp\obj\Debug\livehelp.csprojResolveAssemblyReference.cache
+C:\..PROJECTS\LiveChat\livehelp\livehelp\obj\Debug\livehelp.dll
+C:\..PROJECTS\LiveChat\livehelp\livehelp\obj\Debug\livehelp.pdb
