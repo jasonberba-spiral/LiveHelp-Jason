@@ -283,7 +283,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/23/2015 12:43:15</publishTime>
     </File>
     <File Include="Views/LiveHelp/Index.cshtml">
-      <publishTime>07/23/2015 14:34:08</publishTime>
+      <publishTime>07/23/2015 14:46:13</publishTime>
     </File>
     <File Include="Views/Shared/Error.aspx">
       <publishTime>07/21/2015 15:14:58</publishTime>
