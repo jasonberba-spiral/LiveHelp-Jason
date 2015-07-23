@@ -1,15 +1,14 @@
 ﻿<%@ Page Language="C#" Inherits="System.Web.Mvc.ViewPage<dynamic>" %>
-
 <!DOCTYPE html>
-
 <html>
-<head runat="server">
+<head>
     <meta name="viewport" content="width=device-width" />
-    <title>Index</title>
+    <title>Error</title>
 </head>
 <body>
-    <div>
-        
-    </div>
+    <hgroup>
+        <h1>Error.</h1>
+        <h2>An error occurred while processing your request.</h2>
+    </hgroup>
 </body>
 </html>
