@@ -210,7 +210,6 @@
     <Content Include="Scripts\knockout-2.2.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="Views\LiveHelp\Index.aspx" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -220,7 +219,7 @@
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\Shared\Error.aspx" />
-    <Content Include="Views\LiveHelp\Test1.cshtml" />
+    <Content Include="Views\LiveHelp\Index.cshtml" />
     <Content Include="Views\LiveHelp\CreateCaseViaLiveHelp.cshtml" />
   </ItemGroup>
   <ItemGroup>

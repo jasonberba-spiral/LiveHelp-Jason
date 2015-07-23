@@ -17,7 +17,12 @@ namespace livehelp.Controllers
         //
         // GET: /LiveHelp/
 
-        [HttpPost]
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        //[HttpPost]
         public ActionResult CreateCaseViaLiveHelp()
         {
             try
@@ -44,7 +49,6 @@ namespace livehelp.Controllers
                 return View();
             }
         }
-
 
     }
 
