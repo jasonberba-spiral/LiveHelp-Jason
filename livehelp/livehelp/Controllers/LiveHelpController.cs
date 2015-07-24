@@ -269,24 +269,6 @@ namespace livehelp.Controllers
 
                 #endregion
 
-                #region Subject
-
-                if (liveHelpInput.Subject == null || liveHelpInput.Subject == string.Empty)
-                {
-                    liveHelpInput.Subject = "LiveHelpCase_" + liveHelpInput.MemberID.ToString() + "_" + DateTime.Now.ToString("F");
-                }
-
-                #endregion
-
-                #region Description
-
-                if (liveHelpInput.Description == null || liveHelpInput.Description == string.Empty)
-                {
-                    liveHelpInput.Description = "LiveHelpCase for " + liveHelpInput.MemberID.ToString() + " at " + DateTime.Now.ToString("F");
-                }
-
-                #endregion
-
                 #region HasCommentsUnreadByOwner
 
                 //Currently defaulst to 0 - false
@@ -317,6 +299,28 @@ namespace livehelp.Controllers
                 {
                     //Temporary value. Clarify with Ryan the default value
                     liveHelpInput.Ticket_ID = "TestLHTicket" + DateTime.Now.ToString();
+                }
+                else
+                {
+                    liveHelpInput.Ticket_ID = "LH" + liveHelpInput.Ticket_ID;
+                }
+
+                #endregion
+
+                #region Subject
+
+                if (liveHelpInput.Subject == null || liveHelpInput.Subject == string.Empty)
+                {
+                    liveHelpInput.Subject = "LiveHelpCase_" + liveHelpInput.MemberID.ToString() + "_" + liveHelpInput.Ticket_ID + "_" + DateTime.Now.ToString("F");
+                }
+
+                #endregion
+
+                #region Description
+
+                if (liveHelpInput.Description == null || liveHelpInput.Description == string.Empty)
+                {
+                    liveHelpInput.Subject = "LiveHelpCase_" + liveHelpInput.MemberID.ToString() + "_" + liveHelpInput.Ticket_ID + "_" + DateTime.Now.ToString("F");
                 }
 
                 #endregion
