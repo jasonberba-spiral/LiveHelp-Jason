@@ -565,7 +565,7 @@ namespace livehelp.Controllers
 
                 using (SqlConnection connection = new SqlConnection(connCRMstr))
                 {
-                    using (SqlCommand cmd = new SqlCommand("[dbo].[spTCase1Insert]", connection))
+                    using (SqlCommand cmd = new SqlCommand("[dbo].[spTLiveHelpInsert]", connection))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
