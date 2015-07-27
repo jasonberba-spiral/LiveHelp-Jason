@@ -35,8 +35,6 @@ namespace livehelp.Controllers
 
                 System.IO.StreamReader reader = new System.IO.StreamReader(HttpContext.Request.InputStream);
 
-                //string test = reader.ReadToEnd();
-
                 lh = JsonConvert.DeserializeObject<LiveHelp>(reader.ReadToEnd());
 
                 lhm.CreateCaseViaLiveHelp(lh);
