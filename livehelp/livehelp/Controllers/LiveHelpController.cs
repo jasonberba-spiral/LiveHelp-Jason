@@ -35,6 +35,8 @@ namespace livehelp.Controllers
 
                 System.IO.StreamReader reader = new System.IO.StreamReader(HttpContext.Request.InputStream);
 
+                //string test = reader.ReadToEnd();
+
                 lh = JsonConvert.DeserializeObject<LiveHelp>(reader.ReadToEnd());
 
                 lhm.CreateCaseViaLiveHelp(lh);
@@ -190,7 +192,7 @@ namespace livehelp.Controllers
             {
                 #region MemberID
 
-                if (liveHelpInput.MemberID == 0)
+                if (liveHelpInput.MemberID == 0 || liveHelpInput.MemberID == null)
                 {
                     liveHelpInput.MemberID = 999999;
                 }
