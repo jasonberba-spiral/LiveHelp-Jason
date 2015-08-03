@@ -280,7 +280,7 @@ namespace livehelp.Controllers
 
                 if (liveHelpInput.CreatedBy == null || liveHelpInput.CreatedBy == string.Empty)
                 {
-                    liveHelpInput.CreatedBy = "user";
+                    liveHelpInput.CreatedBy = "NoCaseOwner";
                 }
 
                 #endregion
