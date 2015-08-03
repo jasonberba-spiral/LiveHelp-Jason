@@ -321,7 +321,7 @@ namespace livehelp.Controllers
 
                 if (liveHelpInput.Description == null || liveHelpInput.Description == string.Empty)
                 {
-                    liveHelpInput.Description = "LiveHelpCase_" + liveHelpInput.MemberID.ToString() + "_" + liveHelpInput.Ticket_ID + "_" + DateTime.Now.ToString("F");
+                    liveHelpInput.Description = "LiveHelpNow|Case: " + liveHelpInput.Ticket_ID + "|Member: " + liveHelpInput.MemberID.ToString();
                 }
 
                 #endregion
