@@ -246,6 +246,7 @@ namespace livehelp.Controllers
 
                 switch (liveHelpInput.Origin)
                 {
+                        //Needs to be updated with PROD values
                     case 7:
                     case 8:
                     case 9:
@@ -259,11 +260,11 @@ namespace livehelp.Controllers
                     case 232:
                     case 332:
                     case 333:
+                    case 334:
                         break;
-                    //Default the value to 333 "Test" temporarily
-                    //Need to create new Origin ID for "LiveHelp"
+                    //Default to LiveHelpNowID as of UAT
                     default:
-                        liveHelpInput.Origin = 333;
+                        liveHelpInput.Origin = 334;
                         break;
                 }
 
@@ -297,8 +298,7 @@ namespace livehelp.Controllers
 
                 if (liveHelpInput.Ticket_ID == null || liveHelpInput.Ticket_ID == string.Empty)
                 {
-                    //Temporary value. Clarify with Ryan the default value
-                    liveHelpInput.Ticket_ID = "TestLHTicket" + DateTime.Now.ToString();
+                    liveHelpInput.Ticket_ID = "LH" + liveHelpInput.MemberID.ToString() + "_" + DateTime.Now.ToString() ;
                 }
                 else
                 {
@@ -311,7 +311,8 @@ namespace livehelp.Controllers
 
                 if (liveHelpInput.Subject == null || liveHelpInput.Subject == string.Empty)
                 {
-                    liveHelpInput.Subject = "LiveHelpCase_" + liveHelpInput.MemberID.ToString() + "_" + liveHelpInput.Ticket_ID + "_" + DateTime.Now.ToString("F");
+                    //liveHelpInput.Subject = "LiveHelpCase_" + liveHelpInput.MemberID.ToString() + "_" + liveHelpInput.Ticket_ID + "_" + DateTime.Now.ToString("F");
+                    liveHelpInput.Subject = "LiveHelpNow|Case: " + liveHelpInput.Ticket_ID + "|Member: " + liveHelpInput.MemberID.ToString();
                 }
 
                 #endregion
