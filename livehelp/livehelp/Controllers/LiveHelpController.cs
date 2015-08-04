@@ -192,7 +192,7 @@ namespace livehelp.Controllers
 
                 if (liveHelpInput.MemberID == 0 || liveHelpInput.MemberID == null)
                 {
-                    liveHelpInput.MemberID = 999999;
+                    liveHelpInput.MemberID = 0;
                 }
 
                 #endregion
@@ -201,7 +201,7 @@ namespace livehelp.Controllers
 
                 if (liveHelpInput.ParentID == null || liveHelpInput.ParentID == string.Empty)
                 {
-                    liveHelpInput.ParentID = "999999";
+                    liveHelpInput.ParentID = "0";
                 }
 
                 #endregion
