@@ -62,7 +62,7 @@ namespace livehelp.Controllers
         }
 
 
-        public Int32 MemberID
+        public Int32? MemberID
         {
             get;
             set;
