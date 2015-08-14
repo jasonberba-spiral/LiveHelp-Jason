@@ -197,10 +197,6 @@ namespace livehelp.Controllers
                 {
                     liveHelpInput.MemberID = GetDefaultMemberID(liveHelpInput.Language);
                 }
-                else
-                {
-                    liveHelpInput.MemberID = 0;
-                }
 
                 #endregion
 
