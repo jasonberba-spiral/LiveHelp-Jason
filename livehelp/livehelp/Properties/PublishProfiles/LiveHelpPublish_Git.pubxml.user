@@ -16,7 +16,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/21/2015 15:15:04</publishTime>
     </File>
     <File Include="bin/livehelp.dll">
-      <publishTime>08/14/2015 16:28:42</publishTime>
+      <publishTime>08/14/2015 17:05:54</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>07/21/2015 15:15:11</publishTime>

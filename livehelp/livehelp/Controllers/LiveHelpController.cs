@@ -197,6 +197,10 @@ namespace livehelp.Controllers
                 {
                     liveHelpInput.MemberID = 0;
                 }
+                else
+                {
+                    liveHelpInput.MemberID = GetDefaultMemberID(liveHelpInput.Language);
+                }
 
                 #endregion
 
@@ -666,6 +670,54 @@ namespace livehelp.Controllers
                         file.WriteLine(logMessage);
                     }
                 }
+        }
+
+        private Int32 GetDefaultMemberID(string language)
+        {
+            Int32 retValue = 0;
+
+            try
+            {
+                WriteLogToFile("Preparing Getting Default MemberID", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+
+                string tempConn = ConfigurationManager.AppSettings["connCRMMS1"].ToString();
+                string connCRMstr = tempConn.Replace("[xxx]", "testpass");
+
+                using (SqlConnection connection = new SqlConnection(connCRMstr))
+                {
+                    using (SqlCommand cmd = new SqlCommand("[dbo].[spTLiveHelpInsert_CheckMemberID]", connection))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        cmd.Parameters.Add("@memberid", SqlDbType.VarChar,50).Value = language;
+
+                        WriteLogToFile("Opening Database Connection...", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+
+                        connection.Open();
+
+                        WriteLogToFile("Connection Successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+
+                        int valueFromDB = 0;
+                        valueFromDB = (Int32)cmd.ExecuteScalar();
+
+                        if (valueFromDB > 0)
+                        {
+                            retValue = valueFromDB;
+                        }
+
+                        cmd.Parameters.Clear();
+
+                        WriteLogToFile("Fetch of default memberID successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                    }
+                }
+
+            }
+            catch (Exception Ex)
+            {
+                WriteLogToFile("Error in Getting Default Member ID: " + Ex.Message, ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+            }
+
+            return retValue;
         }
 
     }
