@@ -672,9 +672,9 @@ namespace livehelp.Controllers
                 }
         }
 
-        private Int32 GetDefaultMemberID(string language)
+        private int GetDefaultMemberID(string language)
         {
-            Int32 retValue = 0;
+            int retValue = 0;
 
             try
             {
@@ -698,7 +698,7 @@ namespace livehelp.Controllers
                         WriteLogToFile("Connection Successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
 
                         int valueFromDB = 0;
-                        valueFromDB = (Int32)cmd.ExecuteScalar();
+                        valueFromDB = (int)cmd.ExecuteScalar();
 
                         if (valueFromDB > 0)
                         {
