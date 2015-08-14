@@ -61,7 +61,6 @@ namespace livehelp.Controllers
             //
         }
 
-
         public Int32? MemberID
         {
             get;
@@ -152,7 +151,11 @@ namespace livehelp.Controllers
             get;
             set;
         }
-
+        public string Language
+        {
+            get;
+            set;
+        }
     }
 
     public class LiveHelpMethods
@@ -551,6 +554,16 @@ namespace livehelp.Controllers
 
                 #endregion
 
+                #region Language
+
+                if (liveHelpInput.Language == null || liveHelpInput.LastModifiedBy == string.Empty)
+                {
+                    //Defaults to English User
+                    liveHelpInput.Language = "EN";
+                }
+
+                #endregion
+
                 return liveHelpInput;
             }
             catch (Exception Ex)
@@ -592,6 +605,7 @@ namespace livehelp.Controllers
                         cmd.Parameters.Add("@HowDoTheyFeelAboutUs", SqlDbType.BigInt).Value = lhInput.HowDoTheyFeelAboutUs;
                         cmd.Parameters.Add("@Summary_Of_Chat", SqlDbType.NVarChar).Value = lhInput.Summary_Of_Chat;
                         cmd.Parameters.Add("@LastModifiedBy", SqlDbType.VarChar, 50).Value = lhInput.LastModifiedBy;
+                        cmd.Parameters.Add("@Language", SqlDbType.VarChar, 50).Value = lhInput.LastModifiedBy;
 
                         WriteLogToFile("Opening Database Connection...", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
 
