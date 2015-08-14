@@ -605,7 +605,7 @@ namespace livehelp.Controllers
                         cmd.Parameters.Add("@HowDoTheyFeelAboutUs", SqlDbType.BigInt).Value = lhInput.HowDoTheyFeelAboutUs;
                         cmd.Parameters.Add("@Summary_Of_Chat", SqlDbType.NVarChar).Value = lhInput.Summary_Of_Chat;
                         cmd.Parameters.Add("@LastModifiedBy", SqlDbType.VarChar, 50).Value = lhInput.LastModifiedBy;
-                        cmd.Parameters.Add("@Language", SqlDbType.VarChar, 50).Value = lhInput.LastModifiedBy;
+                        cmd.Parameters.Add("@Language", SqlDbType.VarChar, 50).Value = lhInput.Language;
 
                         WriteLogToFile("Opening Database Connection...", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
 
