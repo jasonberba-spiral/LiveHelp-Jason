@@ -195,11 +195,11 @@ namespace livehelp.Controllers
 
                 if (liveHelpInput.MemberID == 0 || liveHelpInput.MemberID == null)
                 {
-                    liveHelpInput.MemberID = 0;
+                    liveHelpInput.MemberID = GetDefaultMemberID(liveHelpInput.Language);
                 }
                 else
                 {
-                    liveHelpInput.MemberID = GetDefaultMemberID(liveHelpInput.Language);
+                    liveHelpInput.MemberID = 0;
                 }
 
                 #endregion
@@ -685,11 +685,11 @@ namespace livehelp.Controllers
 
                 using (SqlConnection connection = new SqlConnection(connCRMstr))
                 {
-                    using (SqlCommand cmd = new SqlCommand("[dbo].[spTLiveHelpInsert_CheckMemberID]", connection))
+                    using (SqlCommand cmd = new SqlCommand("[dbo].[spTLiveHelpGet_MemberID]", connection))
                     {
                         cmd.CommandType = CommandType.StoredProcedure;
 
-                        cmd.Parameters.Add("@memberid", SqlDbType.VarChar,50).Value = language;
+                        cmd.Parameters.Add("@Language", SqlDbType.VarChar, 50).Value = language;
 
                         WriteLogToFile("Opening Database Connection...", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
 
