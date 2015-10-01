@@ -695,7 +695,14 @@ namespace livehelp.Controllers
                         cmd.CommandType = CommandType.StoredProcedure;
 
                         cmd.Parameters.Add("@liveHelpID", SqlDbType.BigInt).Value = lhInput.LiveHelpID;
-                        cmd.Parameters.Add("@memberid", SqlDbType.BigInt).Value = lhInput.MemberID;
+                        if (lhInput.MemberID == null)
+                        {
+                            cmd.Parameters.Add("@memberid", SqlDbType.BigInt).Value = DBNull.Value;
+                        }
+                        else
+                        {
+                            cmd.Parameters.Add("@memberid", SqlDbType.BigInt).Value = lhInput.MemberID;
+                        }
                         cmd.Parameters.Add("@userName", SqlDbType.VarChar, 50).Value = lhInput.UserName;
                         cmd.Parameters.Add("@createdDate", SqlDbType.DateTime).Value = lhInput.CreatedDate;
                         cmd.Parameters.Add("@createdBy", SqlDbType.VarChar, 50).Value = lhInput.CreatedBy;
