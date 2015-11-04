@@ -337,7 +337,7 @@ namespace livehelp.Controllers
                 if (liveHelpInput.Language == null || liveHelpInput.LastModifiedBy == string.Empty)
                 {
                     //Defaults to English User
-                    liveHelpInput.Language = "EN";
+                    liveHelpInput.Language = "";
                 }
 
                 #endregion
