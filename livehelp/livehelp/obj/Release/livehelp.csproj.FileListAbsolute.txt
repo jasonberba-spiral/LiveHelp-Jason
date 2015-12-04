@@ -69,3 +69,4 @@ C:\PROGRAMMING\jasonberba-spiral\LiveHelp-Jason\livehelp\livehelp\bin\System.Web
 C:\PROGRAMMING\jasonberba-spiral\LiveHelp-Jason\livehelp\livehelp\obj\Release\livehelp.csprojResolveAssemblyReference.cache
 C:\PROGRAMMING\jasonberba-spiral\LiveHelp-Jason\livehelp\livehelp\obj\Release\livehelp.dll
 C:\PROGRAMMING\jasonberba-spiral\LiveHelp-Jason\livehelp\livehelp\obj\Release\livehelp.pdb
+C:\PROGRAMMING\jasonberba-spiral\LiveHelp-Jason\livehelp\livehelp\bin\CustomControl.dll

@@ -8,6 +8,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
 using System.IO;
+using CustomControl;
 
 
 namespace livehelp.Controllers
@@ -685,7 +686,8 @@ namespace livehelp.Controllers
                 WriteLogToFile("Preparing Insert to Database", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
 
                 string tempConn = ConfigurationManager.AppSettings["connCRMMS1"].ToString();
-                string connCRMstr = tempConn.Replace("[xxx]", "testpass");
+                //string connCRMstr = tempConn.Replace("[xxx]", "testpass");
+                string connCRMstr = tempConn.Replace("[xxx]", Encryption.Decrypt(ConfigurationManager.AppSettings["connCRMMS1_Password"].ToString()));
 
                 using (SqlConnection connection = new SqlConnection(connCRMstr))
                 {
@@ -807,7 +809,8 @@ namespace livehelp.Controllers
                 WriteLogToFile("Preparing Getting Default MemberID", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
 
                 string tempConn = ConfigurationManager.AppSettings["connCRMMS1"].ToString();
-                string connCRMstr = tempConn.Replace("[xxx]", "testpass");
+                //string connCRMstr = tempConn.Replace("[xxx]", "testpass");
+                string connCRMstr = tempConn.Replace("[xxx]", Encryption.Decrypt(ConfigurationManager.AppSettings["connCRMMS1_Password"].ToString()));
 
                 using (SqlConnection connection = new SqlConnection(connCRMstr))
                 {
