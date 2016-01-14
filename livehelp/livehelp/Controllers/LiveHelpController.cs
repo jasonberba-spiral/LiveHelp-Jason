@@ -31,8 +31,10 @@ namespace livehelp.Controllers
                 LiveHelp lh = new LiveHelp();
                 LiveHelpMethods lhm = new LiveHelpMethods();
 
-                lhm.WriteLogToFile("Log_" + DateTime.Now.ToString(), ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
-                lhm.WriteLogToFile("Call to Method Successful", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                //lhm.WriteLogToFile("Log_" + DateTime.Now.ToString(), ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                lhm.WriteLogToFile("Log_" + DateTime.Now.ToString(), ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
+                //lhm.WriteLogToFile("Call to Method Successful", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                lhm.WriteLogToFile("Call to Method Successful", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
 
                 System.IO.StreamReader reader = new System.IO.StreamReader(HttpContext.Request.InputStream);
 
@@ -45,7 +47,8 @@ namespace livehelp.Controllers
             catch (Exception Ex)
             {
                 LiveHelpMethods lhm = new LiveHelpMethods();
-                lhm.WriteLogToFile("Exception in CreateCaseViaLiveHelp: " + Ex.Message + Ex.StackTrace, ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                //lhm.WriteLogToFile("Exception in CreateCaseViaLiveHelp: " + Ex.Message + Ex.StackTrace, ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                lhm.WriteLogToFile("Exception in CreateCaseViaLiveHelp: " + Ex.Message + Ex.StackTrace, ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
 
                 return View();
             }
@@ -137,8 +140,8 @@ namespace livehelp.Controllers
             get;
             set;
         }
-        
-        
+
+
 
 
         public string ParentID
@@ -228,11 +231,13 @@ namespace livehelp.Controllers
             {
                 LiveHelp lhRet = new LiveHelp();
 
-                WriteLogToFile("Validating LiveHelp values.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                //WriteLogToFile("Validating LiveHelp values.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                WriteLogToFile("Validating LiveHelp values.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
 
                 lhRet = ValidateLiveHelpInput(lhInput);
 
-                WriteLogToFile("Validation Successful LiveHelp values.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                //WriteLogToFile("Validation Successful LiveHelp values.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                WriteLogToFile("Validation Successful LiveHelp values.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
 
                 InsertLiveHelpData_to_LiveHelpTable(lhRet);
             }
@@ -683,7 +688,8 @@ namespace livehelp.Controllers
         {
             try
             {
-                WriteLogToFile("Preparing Insert to Database", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                //WriteLogToFile("Preparing Insert to Database", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                WriteLogToFile("Preparing Insert to Database", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
 
                 string tempConn = ConfigurationManager.AppSettings["connCRMMS1"].ToString();
                 //string connCRMstr = tempConn.Replace("[xxx]", "testpass");
@@ -739,24 +745,28 @@ namespace livehelp.Controllers
                         //cmd.Parameters.Add("@LastModifiedBy", SqlDbType.VarChar, 50).Value = lhInput.LastModifiedBy;
                         //cmd.Parameters.Add("@Language", SqlDbType.VarChar, 50).Value = lhInput.Language;
 
-                        WriteLogToFile("Opening Database Connection...", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        //WriteLogToFile("Opening Database Connection...", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        WriteLogToFile("Opening Database Connection...", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
 
                         connection.Open();
 
-                        WriteLogToFile("Connection Successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        //WriteLogToFile("Connection Successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        WriteLogToFile("Connection Successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
 
                         object val = cmd.ExecuteScalar();
                         cmd.Parameters.Clear();
 
-                        WriteLogToFile("Insert Successful", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        //WriteLogToFile("Insert Successful", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        WriteLogToFile("Insert Successful", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
                     }
                 }
 
             }
             catch (Exception Ex)
             {
-                WriteLogToFile("Exception in Database Insert: " + Ex.Message + Ex.StackTrace, ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
-                
+                //WriteLogToFile("Exception in Database Insert: " + Ex.Message + Ex.StackTrace, ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                WriteLogToFile("Exception in Database Insert: " + Ex.Message + Ex.StackTrace, ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
+
                 throw Ex;
             }
         }
@@ -783,21 +793,21 @@ namespace livehelp.Controllers
         public void WriteLogToFile(string logMessage, string logPath, string fileName)
         {
             if (Directory.Exists(logPath))
+            {
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(logPath + fileName, true))
                 {
-                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(logPath + fileName, true))
-                    {
-                        file.WriteLine(logMessage);
-                    }
+                    file.WriteLine(logMessage);
                 }
-                else
-                {
-                    Directory.CreateDirectory(logPath);
+            }
+            else
+            {
+                Directory.CreateDirectory(logPath);
 
-                    using (System.IO.StreamWriter file = new System.IO.StreamWriter(logPath + fileName, true))
-                    {
-                        file.WriteLine(logMessage);
-                    }
+                using (System.IO.StreamWriter file = new System.IO.StreamWriter(logPath + fileName, true))
+                {
+                    file.WriteLine(logMessage);
                 }
+            }
         }
 
         private Int32 GetDefaultMemberID(string language)
@@ -806,7 +816,8 @@ namespace livehelp.Controllers
 
             try
             {
-                WriteLogToFile("Preparing Getting Default MemberID", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                //WriteLogToFile("Preparing Getting Default MemberID", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                WriteLogToFile("Preparing Getting Default MemberID", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
 
                 string tempConn = ConfigurationManager.AppSettings["connCRMMS1"].ToString();
                 //string connCRMstr = tempConn.Replace("[xxx]", "testpass");
@@ -820,11 +831,13 @@ namespace livehelp.Controllers
 
                         cmd.Parameters.Add("@Language", SqlDbType.VarChar, 50).Value = language;
 
-                        WriteLogToFile("Opening Database Connection...", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        //WriteLogToFile("Opening Database Connection...", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        WriteLogToFile("Opening Database Connection...", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
 
                         connection.Open();
 
-                        WriteLogToFile("Connection Successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        //WriteLogToFile("Connection Successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        WriteLogToFile("Connection Successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
 
                         Int32 valueFromDB = 0;
                         valueFromDB = Convert.ToInt32(cmd.ExecuteScalar());
@@ -836,14 +849,16 @@ namespace livehelp.Controllers
 
                         cmd.Parameters.Clear();
 
-                        WriteLogToFile("Fetch of default memberID successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        //WriteLogToFile("Fetch of default memberID successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                        WriteLogToFile("Fetch of default memberID successful.", ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
                     }
                 }
 
             }
             catch (Exception Ex)
             {
-                WriteLogToFile("Error in Getting Default Member ID: " + Ex.Message, ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                //WriteLogToFile("Error in Getting Default Member ID: " + Ex.Message, ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString());
+                WriteLogToFile("Error in Getting Default Member ID: " + Ex.Message, ConfigurationManager.AppSettings["logPathLocation"].ToString(), ConfigurationManager.AppSettings["logFileName"].ToString().Replace(".txt", DateTime.Now.ToString("yyyyMMdd") + ".txt"));
             }
 
             return retValue;

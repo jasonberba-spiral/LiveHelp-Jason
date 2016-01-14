@@ -19,7 +19,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>07/21/2015 15:15:04</publishTime>
     </File>
     <File Include="bin/livehelp.dll">
-      <publishTime>12/04/2015 15:03:26</publishTime>
+      <publishTime>01/14/2016 10:25:39</publishTime>
     </File>
     <File Include="bin/Microsoft.Web.Infrastructure.dll">
       <publishTime>07/21/2015 15:15:11</publishTime>
